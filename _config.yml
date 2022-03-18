@@ -26,6 +26,7 @@ analytics: # Google Analytics
 
 # Build Settings
 markdown: kramdown
+style: kjhealy
 plugins:
   - jekyll-sitemap
   - jekyll-paginate

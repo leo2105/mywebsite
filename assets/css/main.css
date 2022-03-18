@@ -1000,6 +1000,22 @@ table tfoot td {
   margin: 0 0 10px;
 }
 
+.button {
+  border: none;
+  top:33%;
+  left:30%;
+  padding: 5px 22px;
+  border-radius: 15px;
+  color: rgb(19, 17, 18);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  margin: 8px 10px;
+  cursor: pointer;
+}
+
 .content-box {
   padding: 20px;
   padding-left: 260px;
