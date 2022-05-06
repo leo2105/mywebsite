@@ -1,6 +1,20 @@
-I"<p>I will do itYou’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+I"	<h2 id="1-github-pages-build---invalid-date">#1 GitHub pages build - Invalid date</h2>
 
-<p>To add new posts, simply add a file in the <code class="language-plaintext highlighter-rouge">_posts</code> directory that follows the convention <code class="language-plaintext highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p><strong>Problem</strong></p>
+
+<p>Fix error when building github pages about. <a href="https://github.com/leo2105/mywebsite/runs/6314978356?check_suite_focus=true">Link</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>... Invalid date '&lt;%= Time.now.strftime('%Y-%m-%d %H:%M:%S %z') %&gt;': Document 'vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.2/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb' does not have a valid date in the YAML front matter... 
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In _config.yml file, add exclude:[vendor]
+</code></pre></div></div>
+
+<p>Reference: <a href="https://github.com/jekyll/jekyll/issues/5267#issuecomment-241379902">exclude “vendor”</a></p>
+
+<h2 id="2-lets-see">#2 Let’s see…</h2>
 
 <p>Jekyll also offers powerful support for code snippets:</p>
 

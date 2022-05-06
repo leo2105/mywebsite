@@ -1,14 +1,29 @@
 ---
 layout: post
-title: "Forum"
+title: "Issues blog"
 date: 2022-05-05 19:00:00 -0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img:  # Add image post (optional)
 ---
 
-I will do itYou’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+## #1 GitHub pages build - Invalid date
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+**Problem**
+
+Fix error when building github pages about. [Link](https://github.com/leo2105/mywebsite/runs/6314978356?check_suite_focus=true)
+
+
+    ... Invalid date '<%= Time.now.strftime('%Y-%m-%d %H:%M:%S %z') %>': Document 'vendor/bundle/ruby/2.7.0/gems/jekyll-4.2.2/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb' does not have a valid date in the YAML front matter... 
+
+
+**Solution**
+
+    In _config.yml file, add exclude:[vendor]
+
+Reference: [exclude "vendor"](https://github.com/jekyll/jekyll/issues/5267#issuecomment-241379902) 
+
+
+## #2 Let's see...
 
 Jekyll also offers powerful support for code snippets:
 
